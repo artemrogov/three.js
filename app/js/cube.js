@@ -44,6 +44,18 @@ function initiate() {
 			scene.add(light);
 
 			renderer.render(scene,camera);
+			function moveCube(e) {
+				mesh.rotation.z = -e.pageX*0.01;
+				mesh.rotation.x = e.pageY * 0.01;
+
+				renderer.render(scene,camera);
+			}
+			
+
+			
+			canvas.addEventListener('mousemove',moveCube);
+
+
 	}
 }
 
