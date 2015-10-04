@@ -1,4 +1,6 @@
+
 function initiate() {
+	var renderer, scene, camera, mesh;
 	var canvas = document.getElementById('canvas');
 	var width = canvas.width;
 	var height = canvas.height;
@@ -19,7 +21,14 @@ function initiate() {
 	var mesh = new THREE.Mesh(geometry,material);
 
 	scene.add(mesh);
-
+function move(e) {
+	mesh.rotation.x = e.pageY*0.01;
+	mesh.rotation.z = -e.pageX*0.01;
 	renderer.render(scene,camera);
 }
+	//renderer.render(scene,camera);
+	canvas.addEventListener('mousemove',move);
+}
+
+
 addEventListener('load',initiate);
