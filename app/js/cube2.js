@@ -11,7 +11,7 @@ var CubeRotation = (function(){
 			}
 		),
 	 	 scene = new THREE.Scene(),
-		 camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 1000),
+		 camera = new THREE.PerspectiveCamera(38, width/height, 0.1, 1000),
 		 geometry = new THREE.CubeGeometry(50,50,50),
 		 texture = new THREE.Texture(img),
 		 material = new THREE.MeshPhongMaterial({
@@ -19,6 +19,7 @@ var CubeRotation = (function(){
 			}),
 		 mesh = new THREE.Mesh(geometry, material),
 		 light = new THREE.SpotLight(0xFFFFFF);
+		
 
 		
 		var init = function() {
@@ -31,9 +32,10 @@ var CubeRotation = (function(){
 			Здесь пишут то, что должно произойти сразу!
 		*/
 		$('#rott').on('click',_render);//
-		$('#stop').on('click',_stop);
 		img.setAttribute('src','img/cube.jpg');
 		img.addEventListener('load',_createworld);
+	
+
 	};
 	var _createworld = function() {
 		renderer.setClearColor(0xFFFFFF);

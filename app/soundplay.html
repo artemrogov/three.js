@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF­8"> 
+<title>WebGL</title> 
+<!--<link rel="stylesheet" href="bower/normalize.css/normalize.css"> 
+<link rel="stylesheet" href="css/main.css">-->
+<style>
+#progress {
+	width:0px;
+	height:16px;
+	background: rgba(0,0,150,.2);
+	
+}
+#bar {
+	float:left;
+	width:400px;
+	height:16px;
+	padding:2px;
+	margin:2px 5px;
+	border:1px solid #CCCCCC;
+	background:#EEEEEE;
+}
+</style>
+</head> 
+<body> 
+
+<audio id = "soundtrack">
+	<source src = "sound/1.mp3">
+</audio>
+
+<div class = "player">
+<div class = "btn-container">
+	<button id = "play-btn">Play</button>
+	<button id = "stop-btn">Stop</button>
+</div>
+<div id = "bar" class = "bar">
+	<div id = "progress" class = "progress-indicator">
+	</div>
+</div>
+<div>
+<input type ="range" id ="vol" min ="0" max="1" step="0.1" value="0.6">
+
+</div>
+
+</div>
+<script src="bower/jquery/jquery.js"></script>
+<script src="js/sound.js"></script> 
+</body> 
+</html>

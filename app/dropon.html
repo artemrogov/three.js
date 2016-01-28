@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF­8"> 
+<title>WebGL</title> 
+<!--<link rel="stylesheet" href="bower/normalize.css/normalize.css"> 
+<link rel="stylesheet" href="css/main.css">-->
+<style>
+
+.box-container {
+	float:left;
+	width:500px;
+	height:300px;
+
+	
+}
+.img-box, .box-container {
+	border:1px solid #999999;
+	margin:10px;
+}
+.img-box {
+	float:left;
+	width:auto;
+	height:auto;
+	
+}
+.img-box >img {
+	float:left;
+	padding:5px;
+}
+.box2, .box3 {
+	border:1px solid black;
+	background:red;
+	padding:40px;
+	float:left;
+	margin:5px;
+
+}
+</style>
+</head> 
+<body> 
+<section id = "box" class = "box-container">
+	Перетащи сюда изображение
+</section>
+<section id = "imageBox" class = "img-box">
+	<img id = "image1" src = "http://www.minkbooks.com/content/monster1.gif" alt = "image"/>
+</section>
+<section id = "altbox" class = "box2">
+	пертащи кубик сюда!
+</section>
+<section id ="subject" class = "box3"> 
+	первый куб
+</section>
+
+<script src="js/dropon.js"></script> 
+</body> 
+</html>
